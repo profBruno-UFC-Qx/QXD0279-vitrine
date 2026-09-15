@@ -34,8 +34,8 @@
 
     <div class="anuncios">
       <AnuncioModal 
-        v-for="(anuncio, index) in anuncios" 
-        :key="index" 
+        v-for="anuncio in anuncios" 
+        :key="anuncio.id" 
         :anuncio="anuncio" 
       />
     </div>
@@ -44,6 +44,7 @@
 
 <script>
 import AnuncioModal from './AnuncioModal.vue';
+import { anuncios } from '@/data/anuncios';
 
 export default {
   name: 'AnunciosHome',
@@ -56,56 +57,7 @@ export default {
       filtroTamanho: '',
       filtroPreco: '',
       ordenarPor: '',
-      anuncios: [
-        {
-          "nomeDoItem": "Camiseta Básica Preta",
-          "descricao": "Camiseta masculina preta, 100% algodão, tamanho M.",
-          "endereco": "Rua das Flores, 120 - Centro",
-          "preco": 39.90
-        },
-        {
-          "nomeDoItem": "Calça Jeans Azul",
-          "descricao": "Calça jeans azul tradicional, corte slim, tamanho 42.",
-          "endereco": "Av. Santos Dumont, 850 - Aldeota",
-          "preco": 119.90
-        },
-        {
-          "nomeDoItem": "Moletom Cinza",
-          "descricao": "Moletom cinza com capuz, confortável para dias frios, tamanho G.",
-          "endereco": "Rua José Vilar, 430 - Meireles",
-          "preco": 89.90
-        },
-        {
-          "nomeDoItem": "Camisa Social Branca",
-          "descricao": "Camisa social branca de manga longa, tamanho M.",
-          "endereco": "Av. Beira Mar, 1500 - Meireles",
-          "preco": 99.90
-        },
-        {
-          "nomeDoItem": "Bermuda Jeans",
-          "descricao": "Bermuda jeans azul clara, modelo casual, tamanho 40.",
-          "endereco": "Rua Monsenhor Tabosa, 320 - Centro",
-          "preco": 69.90
-        },
-        {
-          "nomeDoItem": "Jaqueta Corta-Vento",
-          "descricao": "Jaqueta corta-vento leve, ideal para atividades ao ar livre, tamanho G.",
-          "endereco": "Av. Washington Soares, 2100 - Edson Queiroz",
-          "preco": 129.90
-        },
-        {
-          "nomeDoItem": "Vestido Floral",
-          "descricao": "Vestido estampado com flores, tecido leve e confortável, tamanho M.",
-          "endereco": "Rua Dom Luís, 700 - Aldeota",
-          "preco": 109.90
-        },
-        {
-          "nomeDoItem": "Tênis Casual Branco",
-          "descricao": "Tênis casual branco de uso diário, tamanho 41.",
-          "endereco": "Av. Bezerra de Menezes, 950 - Fátima",
-          "preco": 149.90
-        }
-      ]
+      anuncios
     }
   }
 }

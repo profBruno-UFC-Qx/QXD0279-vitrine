@@ -1,35 +1,18 @@
 <template>
-  
-  
-  <AppNavbar> </AppNavbar>
-
-  <AppHomeHeader />
-
-  <AnunciosHome />
-
-  <BannerDown />
-  
-  <footer class="footer">
-    <FooterBar> </FooterBar>
-  </footer>
-  
+  <AppNavbar />
+  <RouterView class="conteudo-principal" />
+  <FooterBar />
 </template>
 
 <script>
 import AppNavbar from './components/AppNavbar.vue';
 import FooterBar from './components/FooterBar.vue';
-import AppHomeHeader from './components/AppHomeHeader.vue';
-import AnunciosHome from './components/AnunciosHome.vue';
-import BannerDown from './components/BannerDown.vue';
 
 export default {
   name: 'App',
   components: {
     AppNavbar,
-    FooterBar,
-    AppHomeHeader,
-    AnunciosHome,
-    BannerDown
+    FooterBar
   }
 }
 </script>
@@ -47,9 +30,17 @@ export default {
   min-height: 100vh;
 }
 
-.footer {
-  display: flex;
-  align-items: flex-end;
+.conteudo-principal {
+  flex: 1;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #f8fafc;
+}
+
+#app > .footer {
   margin-top: auto;
 }
 </style>
