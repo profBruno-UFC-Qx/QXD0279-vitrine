@@ -1,0 +1,14 @@
+-> Corrigir elementos da imagem na tela inicial
+- Ajustar elementos
+- Ajustar cor
+
+-> Corrigir Banner Down
+- Ajustar elementos
+- Ajustar largura
+
+-> Corrigir Anuncios Home
+- Corrigir anuncios sobrepondo Banner Down
+
+
+-> Corrigir Anuncio Modal
+- Ajustar elemntos no Modal
